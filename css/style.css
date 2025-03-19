@@ -1,0 +1,944 @@
+@charset "UTF-8";
+
+/* cherry boom font - only en  // font-family: 'Cherry Bomb One';  */
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+
+
+/* font  */
+
+
+
+/* css */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    font-family: 'S-CoreDream';
+    font-size: 1em;
+    min-width: 1320px;
+}
+
+/* header - event menu */
+.event {
+    background-color: #314628;
+    display: flex;
+    justify-content: center;
+
+}
+
+.event a{
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+.event p{
+    padding-left: 10px;
+}
+
+.event a:hover {
+    color: #FFB12B; 
+}
+
+
+/* top  */
+.top {
+    width: 1320px;
+    margin: auto;
+}
+.top ul{
+      display: flex; 
+      justify-content: end;
+}
+.top ul a{
+    display: block;
+      font-size: 14px;
+padding: 10px;
+}
+.top li {
+    position: relative;
+    z-index: 2;
+}
+
+.top a:hover {
+    color: #999;
+}
+
+
+/* header */
+header {
+    margin-top: -29px;
+
+}
+
+.header_in {
+    width: 1320px;
+    height: 78px;
+    margin: auto;
+    position: relative;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    top: 5px;
+    left: 5%;
+
+}
+/* 밑줄효과 */
+.nav span::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #314628;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+    transform: scaleX(0);
+    transition: 0.5s;
+    /* 밑줄이 생기는 기준이 중심이로 잡혀있어서 값 입력해주기 */
+    transform-origin: left;
+}
+
+.nav span {
+    position: relative;
+}
+
+.nav span:hover::before {
+    transform: scaleX(1);
+}
+/* 밑줄효과 */
+
+.nav {
+display: flex;
+    padding-left: 100px;
+    gap: 100px;
+    font-size: 20px;
+
+}
+
+.nav a {
+    display: block;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: #314628;
+}
+
+.mySwiper .swiper-button-prev:after{
+    color: #314628;
+    }
+
+    .mySwiper .swiper-button-next:after{
+        color: #314628;
+        }
+
+
+
+.mySwiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+    background-color: #314628;
+}
+
+ /* swiper-pagination, progressbar*/
+/* 바 하단으로 이동 */
+.mySwiper .swiper-pagination {
+    top: auto;
+    bottom: 0;
+}  
+
+
+/* mainbanner 1p */
+
+/* animation 효과 */
+
+@keyframes trans{
+    0%{
+        transform: translate(0,50%);
+
+       
+    }
+    100%{ transform: translate(0,0);
+    }
+}
+
+/* @keyframes ro{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+} */
+
+@keyframes op{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* top button */
+@keyframes btn{
+    0%{transform: translateY(0);}
+    100%{transform: translateY(-20px);}
+}
+
+.top_btn{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    mix-blend-mode: luminosity;
+z-index: 2;
+    animation: btn 2s linear infinite alternate;
+}
+/* animation ---------- */
+
+/* mainbaner slide---------------------- */
+.mySwiper .slide1 {
+    position: relative;
+    width: 100%;
+}
+.mb_bg{
+    width: 100%;
+}
+.mb_salad{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -542px;
+
+    max-width: 1084px;
+    width: 75%;
+
+    animation: trans 3s linear alternate both;
+}
+.mb_logo{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    margin-left: -220px;
+
+    max-width: 440px;
+    width: 25%;
+
+    animation: op 1s 6s linear alternate both;
+
+}
+
+.mb_avo {
+    position: absolute;
+    top: -30px;
+    right: 30px;
+    transform: rotate(40deg);
+    max-width: 239px;
+    width: 11%;
+    animation: op 0.1s 3s linear alternate both;
+
+
+}
+
+.mb_bazil {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    max-width: 207px;
+    width: 11%;
+    animation: op 0.1s 5s linear alternate both;
+
+   
+}
+
+.mb_corn {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    max-width: 72px;
+    width: 4%;
+    animation: op 1s 4.5s linear alternate both;
+
+ 
+}
+
+.mb_corn2 {
+    position: absolute;
+    bottom: 30%;
+    right: 20%;
+    max-width: 72px;
+    width: 4%;
+    animation: op 1s 4.5s linear alternate both;
+
+}
+
+.mb_cucum {
+    position: absolute;
+    top: 45%;
+    right: -1%;
+    max-width: 245px;
+    width: 10%;
+    animation: op 0.1s 4s linear alternate both;
+
+
+}
+
+.mb_onion {
+    position: absolute;
+    right: 7%;
+    bottom: 0%;
+    max-width: 234px;
+    width: 13%;
+
+    animation: op 0.1s 3.5s linear alternate both;
+
+}
+
+.mb_leaf_l {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    max-width: 330px;
+    width: 13%;
+    animation: op 0.1s 3s linear alternate both;
+
+
+}
+
+.mb_leaf_r {
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    max-width: 193px;
+    width: 10%;
+
+    animation: op 0.1s 5s linear alternate both;
+
+    
+}
+
+.mb_yellow {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    rotate: 10deg;
+    max-width: 243px;
+    width: 10%;
+    animation: op 0.1s 4s linear alternate both;
+
+}
+
+.mb_red {
+    position: absolute;
+    top: 5%;
+    right: 25%;
+    max-width: 155px;
+    width: 10%;
+    animation: op 0.1s 4.5s linear alternate both;
+
+}
+
+.mb_toma {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    rotate: -15deg;
+    max-width: 224px;
+    width: 10%;
+    animation: op 0.1s 3.5s linear alternate both;
+
+
+}
+
+/* mb */
+.mb2 {
+    margin: auto;
+    width: 100%;
+   
+}
+
+
+
+/* ------------------------------------------------ */
+/* content1 - con1 */
+.con1 {
+    margin: 150px auto;
+    width: 1320px;
+    text-align: center;
+}
+
+h1 {
+
+    font-family: 'Cherry Bomb One';
+    color: #27391F;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+h3 {
+
+    font-size: 20px;
+    padding: 30px 0 70px;
+    font-weight: 500;
+}
+
+.imgbox {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.imgbox>img {
+    width: 400px;
+}
+
+/* con1 - hover */
+h2,
+h4 {
+    color: #fff;
+    font-weight: 500;
+}
+
+.con1 h2 {
+    font-size: 30px;
+}
+
+.con1 h4 {
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.textbox span {
+    color: #FF4343;
+    padding-right: 5px;
+}
+
+.imgbox>li {
+    position: relative;
+    overflow: hidden;
+}
+
+.textbox {
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.imgbox li:hover .textbox {
+    opacity: 1;
+}
+
+.plus {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    margin-left: -16px;
+}
+
+/* content1  */
+
+/* ------------------------------------------------ */
+/*content 2 - con2 */
+.con2 {
+    width: 100%;
+    
+    margin: 50px auto 150px;
+}
+
+/*content 2  */
+
+
+
+/* ------------------------------------------------ */
+/* content3 */
+/* salad 1page 꾸미기 */
+.mySwiper3 {
+    width: 100%;
+    background: linear-gradient(to bottom, #fff 15%, #F3FFD2 15%, #F3FFD2 85%, #fff 85%);
+    margin-bottom: 150px;
+}
+.mySwiper3 .swiper-button-next{
+    right: 50%;
+    margin-right: -700px;
+    color: #999;
+}
+.mySwiper3 .swiper-button-prev{
+    left: 50%;
+    margin-left: -700px;
+    color: #999;
+}
+
+.con3_wrap {
+    width: 1320px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 200px;
+}
+
+.con3_top {
+    color: #83A132;
+    font-size: 60px;
+    font-weight: 200;
+    width: 100%;
+}
+
+.con3_text {
+    margin-top: 50px;
+}
+
+.con3_text h1 {
+    font-family: 'S-CoreDream';
+    font-weight: 500;
+    color: #45700C;
+
+
+}
+
+.con3_text>h3 {
+    font-size: 30px;
+    padding: 10px;
+    font-weight: 400;
+}
+
+.con3_text b {
+    color: #999;
+    font-weight: 300;
+    text-decoration: line-through;
+}
+
+.orange {
+    color: #FF6E00;
+}
+
+.bg_rdius>p {
+    display: inline-block;
+    background-color: #709233;
+    border-radius: 50px;
+    margin: 0px 10px 10px 0;
+    padding: 5px 20px;
+    color: #fff;
+
+}
+
+.small {
+    margin-top: 10px;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.con3 h1,
+.con3 h3 {
+    text-align: center;
+}
+
+/* juice 2page 추가 꾸미기 */
+.mySwiper3_2 {
+    background: linear-gradient(to bottom, #fff 15%, #FEF5BD 15%, #FEF5BD 85%, #fff 85%);
+}
+
+.top_yellow {
+    color: #FFA200;
+}
+
+.con3_2 h1 {
+    color: #FFB12B;
+}
+
+.radius_yellow {
+    display: inline-flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+}
+
+.radius_yellow p {
+    background-color: #FFB12B;
+    line-height: 1.6;
+}
+
+.con3_radiuswrap {
+    display: flex;
+    padding-top: 10px;
+}
+
+.wrapin_text {
+    font-size: 1em;
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+/* sandwich 3page 추가꾸미기 */
+.mySwiper3_3 {
+    background: linear-gradient(to bottom, #fff 15%, #FFE4B5 15%, #FFE4B5 85%, #fff 85%);
+}
+.top_orange,
+.con3_3 h1 {
+    color: #FF9747;
+}
+
+.radius_orange p {
+    background-color: #FF9747;
+    margin-top: 10px;
+}
+.sand_red{
+    color: #FF0000;
+}
+
+/* content3 */
+
+
+
+/* ------------------------------------------------ */
+
+/* event banner */
+.event_banner h1,
+.event_banner h4 {
+    color: #EB819B;
+    font-family: 'S-CoreDream';
+}
+
+.event_banner h1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.event_banner h4 {
+    padding-left: 60px;
+    font-weight: 400;
+}
+
+.event_banner {
+    background: url(../images/event_bn.png) no-repeat center top / cover;
+    /* background-color: #FF0900; */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 200px 0;
+    
+}
+
+
+
+
+/* ------------------------------------------------ */
+/* content4 - tab menu */
+.con4 h1,
+.con4 h3 {
+    text-align: center;
+}
+
+.tab {
+    margin: 0 auto;
+    /* background-color: #F3FFD2; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 1320px;
+    text-align: center;
+
+}
+
+.tab>li {
+    width: 20%;
+}
+
+.tab>li>a {
+    text-align: center;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 50px;
+    background-color: #fff;
+    border: #999 solid 1px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+ol {
+    list-style: none;
+
+}
+
+ol li a {
+    width: 420px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+.tab ol {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab ol li {
+    width: 420px;
+    height: 460px;
+}
+
+/* on 클래스 달렸을때 */
+.tab>.on>a {
+    background-color: #83A132;
+    border: #fff solid 1px;
+    color: #fff;
+    position: relative;
+}
+
+.tab>.on>div {
+    /* 떠있는 상태 */
+    position: absolute;
+    /* 위치값을 정해줘야 탭 눌렀을때 기준점이 왼쪽으로 위치한다 */
+    left: 0;
+
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+    box-sizing: border-box;
+
+    /* 내용에 맞게 자동으로 높이를 맞춘다 */
+    height: auto;
+}
+
+
+/* on 클래스 없을때  */
+.tab>li>div {
+    overflow: hidden;
+
+}
+
+.recom1 {
+    background: url(../images/tomato.png) no-repeat;
+    border-radius: 50px;
+}
+
+.recom2 {
+    background: url(../images/green_j.png) no-repeat;
+    border-radius: 50px;
+}
+
+.recom3 {
+    background: url(../images/beet.png) no-repeat;
+    border-radius: 50px;
+}
+
+.prod1 {
+    background: url(../images/beet.png) no-repeat;
+    border-radius: 50px;
+}
+
+.prod2 {
+    background: url(../images/salad.png) no-repeat;
+    border-radius: 50px;
+}
+
+.prod3 {
+    background: url(../images/green_j.png) no-repeat;
+    border-radius: 50px;
+}
+
+.health1 {
+    background: url(../images/tomato.png) no-repeat;
+    border-radius: 50px;
+}
+
+.health2 {
+    background: url(../images/protein.png) no-repeat;
+    border-radius: 50px;
+}
+
+.health3 {
+    background: url(../images/avocado.png) no-repeat;
+    border-radius: 50px;
+}
+
+/* content4 - tab menu */
+/* ------------------------------------------------ */
+/* content5 -  sns slide */
+.con5{
+    margin-top: 200px;
+}
+.con5 h1, .con5 h3{
+    text-align: center;
+}
+.mySwiper5{
+    margin: 0px auto;
+}
+.mySwiper5 img {
+    width: 100%;
+    display: block;
+}
+.mySwiper5 .swiper-slide img:hover{
+    filter: grayscale(0.5);
+}
+/* content5 - sns slide */
+
+/* content6 - video --------------------------------*/
+
+/* content6 - video ------------------------------ */
+
+/* content 7 - dilivery banner */
+.con7{
+    background: url(../images/bg_deliver.jpg) no-repeat center top / cover;
+height: 400px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+/* padding-left: 300px; */
+}
+.width{
+    width: 1320px;
+    margin: auto;
+}
+
+
+
+.con7 h2, .con7 h4{
+    color: #333;
+}
+.con7 h3{
+padding: 20px 0;
+font-weight: 400;
+font-size: 20px;
+}
+.con7 h4{
+    line-height: 2.5;
+    font-weight: 300;
+    
+}
+
+/* content 8 - callcenter */
+.con8_wrap{
+    background-color: #FCFAE2;
+    
+}
+.con8{
+    width: 1320px;
+    margin: auto;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  position: relative;
+
+}
+.con8_text h2, .con8_text h4{
+color: #000;
+}
+.con8_text h4{
+    line-height: 2.5;
+    font-weight: 300;
+    padding-top: 10px;
+}
+
+.btn{
+    position: absolute;
+    bottom: 25%;
+    left: 30%;
+}
+.btn a{
+    display: inline-block;
+    background-color: #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;  
+}
+.btn a:hover{
+    background-color: #999;
+    color: #fff;
+
+}
+ /* footer  */
+footer{
+    background-color: #314628;
+    padding: 20px 0;
+}
+.footer_in{
+    width: 1320px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+}
+.foot_sns{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+.foot_text, .foot_sns{
+    display: flex;
+    gap: 10px;
+   font-size: 14px;
+}
+.foot_text{
+    gap: 20px;
+
+}
+.foot_text a{
+    color: #fff;
+    display: block;
+}
+
+.border{
+    border-bottom: solid 1px #fff;
+}
+
+.footer2{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    width: 1320px;
+    margin: auto;
+}
+.footer2 p{
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.5;
+}
+.foot_logo{
+   
+height: 78px;
+}
+footer a:hover{
+    opacity: 0.5;
+}
+ /* footer  */
