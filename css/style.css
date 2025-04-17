@@ -812,7 +812,11 @@ ol li a {
 /* content5 - sns slide */
 
 /* content6 - video --------------------------------*/
-
+video{
+    display: block;
+    margin: 200px auto 0;
+    width: 100%;
+}
 /* content6 - video ------------------------------ */
 
 /* content 7 - dilivery banner */
